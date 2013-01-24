@@ -1,12 +1,10 @@
 #include <QApplication>
-#include <QGroupBox>
-#include <QRadioButton>
+#include "MyFrame.h"
 
 int main(int argc, char **argv) {
 	QApplication app(argc, argv);
-	QWidget window;
-	QGroupBox *groupbox = new QGroupBox("Feature extraction method", &window);
-	QRadioButton *sift = new QRadioButton("SIFT");
-	QRadioButton *surf = new QRadioButton("SURF");
+	MyFrame frame;
+	frame.show();
 	return app.exec();
 }
+
