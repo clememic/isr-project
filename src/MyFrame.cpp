@@ -18,7 +18,7 @@ MyFrame::MyFrame() :
 	this->matchesLabel = new QLabel();
 
 	/* Position widgets */
-	QGroupBox *featureExtractionGroupBox = new QGroupBox("Feature extraction");
+	QGroupBox *featureExtractionGroupBox = new QGroupBox;
 	QVBoxLayout *featureExtractionLayout = new QVBoxLayout;
 	featureExtractionLayout->addWidget(siftRadioButton);
 	featureExtractionLayout->addWidget(surfRadioButton);
@@ -31,8 +31,8 @@ MyFrame::MyFrame() :
 	imageSamplesGridLayout->addWidget(browseImgButton2, 1, 1);
 	imageSamplesGroupBox->setLayout(imageSamplesGridLayout);
 	QGridLayout *mainLayout = new QGridLayout;
-	mainLayout->addWidget(featureExtractionGroupBox, 0, 0);
-	mainLayout->addWidget(imageSamplesGroupBox, 0, 1);
+	mainLayout->addWidget(imageSamplesGroupBox, 0, 0);
+	mainLayout->addWidget(featureExtractionGroupBox, 0, 1);
 	mainLayout->addWidget(featureBasedMatchingButton, 1, 0, 1, 3);
 	mainLayout->addWidget(matchesLabel, 2, 0, 1, 3);
 	this->setLayout(mainLayout);
