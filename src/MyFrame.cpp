@@ -111,6 +111,7 @@ void MyFrame::featureBasedMatching() {
 			}
 		}
 		this->matchesLabel->setPixmap(QPixmap::fromImage(image));
+		this->adjustSize();
 	}
 
 }
